@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/nearbyplaces/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/nearbyplaces/static/js/main.1c38b936.chunk.js",
+    "main.js.map": "/nearbyplaces/static/js/main.1c38b936.chunk.js.map",
+    "runtime-main.js": "/nearbyplaces/static/js/runtime-main.9d140aab.js",
+    "runtime-main.js.map": "/nearbyplaces/static/js/runtime-main.9d140aab.js.map",
+    "static/js/2.07cbb0f1.chunk.js": "/nearbyplaces/static/js/2.07cbb0f1.chunk.js",
+    "static/js/2.07cbb0f1.chunk.js.map": "/nearbyplaces/static/js/2.07cbb0f1.chunk.js.map",
+    "static/js/3.32eb5f0b.chunk.js": "/nearbyplaces/static/js/3.32eb5f0b.chunk.js",
+    "static/js/3.32eb5f0b.chunk.js.map": "/nearbyplaces/static/js/3.32eb5f0b.chunk.js.map",
+    "index.html": "/nearbyplaces/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/nearbyplaces/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.07cbb0f1.chunk.js.LICENSE.txt": "/nearbyplaces/static/js/2.07cbb0f1.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/nearbyplaces/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d140aab.js",
+    "static/js/2.07cbb0f1.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.1c38b936.chunk.js"
+  ]
+}
