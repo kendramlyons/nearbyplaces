@@ -34,12 +34,12 @@ class Home extends React.Component {
                 </div>
                 <div id="findPlaces">
                     {this.state.places.map(p => 
-                    <Link to = {{pathname: '/place', state:{place:p} }}>
+                    <Link to = {{pathname: '/place', state:{place:p} }} id="myPlaces">
                     <p>
-                    {p.name}
-                    {p.stars}
-                    {p.reviews}
-                    {p.address}
+                    <h2>{p.name}</h2>
+                    <h3>{p.stars}</h3>
+                    <h4>{p.reviews}</h4>
+                    <h5>{p.address}</h5>
                     </p>
                     </Link>)}
                 </div>

@@ -10,12 +10,13 @@
 }
 #logintext:link {
     text-decoration: none;
+    color: black;
 }
 #loginLink:hover {
-    color: aquamarine;
+    color: mediumpurple;
 }
 #logintext:hover {
-    color: aquamarine;
+    color: mediumpurple;
 }
 #header {
     text-align: center;
@@ -29,4 +30,7 @@
 #mainBody {
     width:100%;
     background-color: lightseagreen;
+}
+#myPlaces {
+    text-decoration: none;
 }

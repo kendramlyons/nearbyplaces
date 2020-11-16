@@ -14,18 +14,6 @@ class Place extends React.Component {
             <div id='place'>
                 {this.props.item.title}
             </div>
-            <img src = {require('../images/'+this.props.item.picture)} 
-                alt={this.props.item.picture} id='flowerpic'></img>
-            <br/>
-            <div id='choices'>
-                {this.props.item.choices.map(c => 
-                    <div>
-                    <input type="radio" id={c} name="choice" value={c} onChange={this.saveAnswer} 
-                        checked={this.state.userAnswers[this.props.cursor] === c ? 'checked' : ''}></input>
-                    <label for={c}>{c}</label><br></br>
-                    </div>
-                    )}
-            </div>
         </div>);
     };
 }
