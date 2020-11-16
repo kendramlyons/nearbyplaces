@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-// import server from '../ServerInterface/server';
+import server from '../ServerInterface/server';
+
 class Home extends React.Component {
     constructor(props) { 
         super(props); 
         this.state = {
             username: '',
+            places: []
         };
+    }
+    componentDidMount(){
+        let data = server.fetchPlaces();
+        this.setState({places: data});
     }
     render() {
         let username = '';
@@ -25,6 +31,17 @@ class Home extends React.Component {
                 <div id="loginLink">
                     {username.length > 0 ? username 
                     : <Link to='/login' id='logintext'>Login</Link>}
+                </div>
+                <div id="findPlaces">
+                    {this.state.places.map(p => 
+                    <Link to = {{pathname: '/place', state:{place:p} }}>
+                    <p>
+                    {p.name}
+                    {p.stars}
+                    {p.reviews}
+                    {p.address}
+                    </p>
+                    </Link>)}
                 </div>
             </div>)
     }

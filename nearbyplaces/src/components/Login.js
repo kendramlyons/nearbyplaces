@@ -9,6 +9,7 @@ class Login extends React.Component {
         this.state = {
             username: '',
             authenticated: false,
+            password: ''
         };
     };
 
@@ -27,17 +28,16 @@ class Login extends React.Component {
     };
 
     render() {
-        let from = {pathname: '/', state: {user: this.state.username}};
+        let from = {pathname: "/", state: {user: this.state.username}};
         if (this.state.authenticated) {
             return(
                 <Redirect to={from} />
             );
         }
-
         return(
-            <div>
-                <div id="header"><h2>Nearby Places Login</h2></div>
-                <div id='home'><Link to='/' id='hometext'>Nearby Places</Link></div>
+            <div id="mainBody">
+                <div id="header"><Link to="/" id="hometext"><h2>Nearby Places</h2></Link>
+                    <h3>Login</h3></div>
                 <form onSubmit={this.onSubmit} id="form">
                     <label>Username: </label>
                     <input 
@@ -46,8 +46,15 @@ class Login extends React.Component {
                     value={this.state.username}
                     onChange={this.handleChange}
                     ></input>
-                    <button type="submit">Login</button>
+                    <label>  Password: </label>
+                    <input
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    ></input>
+                    <button type="submit"> Login </button>
                 </form>
+                <div id="home"></div>
             </div>
         )
     }

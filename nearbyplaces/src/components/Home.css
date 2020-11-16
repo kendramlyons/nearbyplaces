@@ -1,0 +1,32 @@
+
+#loginLink {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    border-style: dotted;
+    padding: 5px;
+    margin-right: 20px;
+    clear: left;
+}
+#logintext:link {
+    text-decoration: none;
+}
+#loginLink:hover {
+    color: aquamarine;
+}
+#logintext:hover {
+    color: aquamarine;
+}
+#header {
+    text-align: center;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: mediumpurple;
+    width:100%;
+    display: inline-block;
+}
+#mainBody {
+    width:100%;
+    background-color: lightseagreen;
+}
