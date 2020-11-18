@@ -2,8 +2,8 @@ import React from 'react';
 import './Place.css';
 
 class Place extends React.Component {
-    constructor(props) { //'props' is always passed to constructor
-        super(props); //have to have 'super' or else error
+    constructor(props) { 
+        super(props); 
         this.state = {
             location : []
         };
@@ -12,7 +12,9 @@ class Place extends React.Component {
     render() {
         return (<div>
             <div id='place'>
-                {this.props.item.title}
+                {this.props.item.name}
+                {this.props.item.address}
+                {this.props.item.reviews}
             </div>
         </div>);
     };

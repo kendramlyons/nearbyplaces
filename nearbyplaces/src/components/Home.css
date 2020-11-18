@@ -1,22 +1,28 @@
 
 #loginLink {
-    float: right;
+    float: center;
+    width: fit-content;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     border-style: dotted;
-    padding: 5px;
-    margin-right: 20px;
-    clear: left;
+    padding:5px;
+    margin-right:auto;
+    margin-left:auto;
+
 }
-#logintext:link {
+#loginText:link {
     text-decoration: none;
     color: black;
 }
-#loginLink:hover {
-    color: mediumpurple;
+#loginLink:link {
+    color:black
 }
-#logintext:hover {
-    color: mediumpurple;
+#loginLink:hover {
+    color:coral;
+}
+#loginText:hover {
+    text-decoration: none;
+    color: lightseagreen;
 }
 #header {
     text-align: center;
@@ -24,13 +30,26 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: mediumpurple;
-    width:100%;
     display: inline-block;
+}
+#searchPlaces {
+    float:center;
+    width: fit-content;
+    border: coral;
+    border-style: dotted;
+    padding: 5px;
+    margin-top:10px;
+    margin-right:auto;
+    margin-left:auto;
 }
 #mainBody {
     width:100%;
     background-color: lightseagreen;
 }
 #myPlaces {
+    display:flex;
     text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin: 10px;
 }
