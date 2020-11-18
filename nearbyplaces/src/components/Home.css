@@ -5,24 +5,25 @@
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     border-style: dotted;
-    padding:5px;
-    margin-right:auto;
-    margin-left:auto;
+    color: mediumpurple;
+    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 #loginText:link {
     text-decoration: none;
-    color: black;
+    color: mediumpurple;
 }
 #loginLink:link {
-    color:black
+    color: mediumpurple;
 }
 #loginLink:hover {
-    color:coral;
+    color: coral;
 }
 #loginText:hover {
     text-decoration: none;
-    color: lightseagreen;
+    color: coral;
 }
 #header {
     text-align: center;
@@ -33,21 +34,21 @@
     display: inline-block;
 }
 #searchPlaces {
-    float:center;
+    float: center;
     width: fit-content;
     border: coral;
     border-style: dotted;
     padding: 5px;
-    margin-top:10px;
-    margin-right:auto;
-    margin-left:auto;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
 }
 #mainBody {
-    width:100%;
-    background-color: lightseagreen;
+    width: 100%;
+    background-color: aquamarine;
 }
 #myPlaces {
-    display:flex;
+    display: flex;
     text-decoration: none;
     color: black;
     padding: 10px;
