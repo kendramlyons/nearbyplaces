@@ -10,13 +10,14 @@ class Place extends React.Component {
     };
 
     render() {
-        return (<div>
+        const { place } = this.props.item;
+        return (
             <div id='place'>
-                {this.props.item.name}
-                {this.props.item.address}
-                {this.props.item.reviews}
+                {place.name}
+                {place.address}
+                {place.reviews}
             </div>
-        </div>);
+        );
     };
 }
 export default Place;

@@ -9,30 +9,18 @@ class Home extends React.Component {
         super(props); 
         this.state = {
             username: '',
-            places: []
+            places: [],
+            // cursor: 0
         };
     }
     componentDidMount(){
         let data = server.fetchPlaces();
         this.setState({places: data});
     }
-    render() {
-        let username = '';
-        const location = this.props.location;
-        if (location) {
-            if (location.state) {
-                if (location.state.user) {
-                    username = location.state.user;
-                }
-            }
-        };
-        return(            
-            <div id="mainBody">
-                <div id="header"><h1>Welcome to Nearby Places!</h1></div>
-                <div id="loginLink">
-                    {username.length > 0 ? username 
-                    : <Link to='/login' id='loginText'> Login </Link>}
-                </div>
+
+    body = () => {
+        return (
+            <div>
                 <div>
                 <form id="searchPlaces">
                     <label> Find Nearby Places: </label>
@@ -51,7 +39,29 @@ class Home extends React.Component {
                     </div>
                     </Link>)}
                 </div>
-            </div>)
+            </div>
+        );
+    }
+    render() {
+        var username = '';
+        const location = this.props.location;
+        if (location) {
+            if (location.state) {
+                if (location.state.user) {
+                    username = location.state.user;
+                };
+            };
+        };
+        return(
+            <div id="mainBody">
+            <div id="header"><h1>Welcome to Nearby Places!</h1></div>
+                <div id="loginLink">
+                    {username.length > 0 ? username 
+                    : <Link to='/login' id='loginText'> Login </Link>}
+                </div>
+            {this.body()}
+            </div>
+        );
     }
 };
 export default Home;
