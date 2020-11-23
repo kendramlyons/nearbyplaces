@@ -12,7 +12,6 @@ class Login extends React.Component {
             password: ''
         };
     };
-
     onSubmit = (event) => {
         //check if user has provided input for username
         if(this.state.username.trim().length > 0) {
@@ -20,20 +19,18 @@ class Login extends React.Component {
         };
         event.preventDefault(); //tells the browser not to do default 
     };
-
     handleChange = (event) => {
         const value = event.target.value;
         const name = event.target.name;
         this.setState({[name]: value});
     };
-
     render() {
         let from = {pathname: "/", state: {user: this.state.username}};
         if (this.state.authenticated) {
             return(
                 <Redirect to={from} />
             );
-        }
+        };
         return(
             <div id="mainBody">
                 <div id="header">
@@ -58,7 +55,7 @@ class Login extends React.Component {
                 </form>
                 <div id="home"></div>
             </div>
-        )
-    }
+        );
+    };
 }
 export default Login;

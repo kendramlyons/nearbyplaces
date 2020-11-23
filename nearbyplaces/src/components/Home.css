@@ -54,3 +54,19 @@
     padding: 10px;
     margin: 10px;
 }
+#addNew {
+    float: center;
+margin-left: 10px;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: dotted;
+    color: mediumpurple;
+    padding: 5px;
+    text-decoration: none;
+}
+#addNew:hover {
+    color:coral;
+}
+#searchResults {
+    display: flex;
+}
