@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import server from '../ServerInterface/server';
-// import Place from './components/Place';
+// import Place from './Place';
 
 class Home extends React.Component {
     constructor(props) { 
@@ -10,12 +10,23 @@ class Home extends React.Component {
         this.state = {
             username: '',
             places: [],
-            // cursor: 0
+            cursor: 0
         };
     }
     componentDidMount(){
         let data = server.fetchPlaces();
         this.setState({places: data});
+        window.addEventListener("keydown", this.handleKeyDown);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("keydown", this.handleKeyDown);
+    }
+
+    handleKeyDown = (e) => {
+        if(e.keyCode === 39) { //right arrow key
+
+        }
     }
 
     body = () => {
@@ -33,9 +44,9 @@ class Home extends React.Component {
                     <Link to = {{pathname: '/place', state:{place:p} }} id="myPlaces">
                     <div>
                     <h2>{p.name}</h2>
-                    <h3>{p.reviews.rating}</h3>
-                    <h4>{p.reviews.text}</h4>
-                    <h5>{p.address}</h5>
+                    <h3>{p.reviews.rating}</h3> 
+                    <p>{p.reviews.text}</p>
+                    <p>{p.address}</p>
                     </div>
                     </Link>)}
                 </div>
