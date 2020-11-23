@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import server from '../ServerInterface/server';
-// import Place from './Place';
+import Place from './Place';
 
 class Home extends React.Component {
     constructor(props) { 
@@ -10,7 +10,9 @@ class Home extends React.Component {
         this.state = {
             username: '',
             places: [],
-            cursor: 0
+            cursor: 0,
+            searchTerm: '',
+            result: []
         };
     }
     componentDidMount(){
@@ -24,28 +26,62 @@ class Home extends React.Component {
     }
 
     handleKeyDown = (e) => {
-        if(e.keyCode === 39) { //right arrow key
-
-        }
+        const {cursor, entries} = this.state;
+        if(e.keyCode === 39 && (cursor < entries.length - 1)) { //right arrow key
+            this.setState({cursor: cursor + 1});
+        } else if (e.keyCode === 37 && (cursor > 0)) {  //left arrow key
+            this.setState({cursor: cursor - 1});
+        };
     }
 
+    search = (event) => {
+        let result = server.search(this.state.searchTerm);
+        this.setState({result: result})
+        event.preventDefault();
+    }
+
+    handleChange = (event) => {
+        const value = event.target.value;
+        const name = event.target.name;
+        this.setState({[name]: value});
+    };
+
     body = () => {
+        const {cursor, places} = this.state;
         return (
             <div>
                 <div>
-                <form id="searchPlaces">
+                <Link to = {{pathname: '/place', state:{username: this.state.username}}}>
+                    Add New Place</Link>
+                </div>
+                <div>
+                <form id="searchPlaces" onSubmit={this.search}>
                     <label> Find Nearby Places: </label>
-                    <input type="text"></input>
+                    <input type="text" value={this.state.searchTerm} 
+                        onChange={this.handleChange} name="searchTerm"></input>
                     <button type="submit">Search</button>
                 </form>
                 </div>
-                <div id="myPlaces">
+                <div id = "searchResults">
+                    {this.state.result.map(r => 
+                    <Link to = {{pathname: '/place', state:{place:r} }} id="myPlaces">
+                    <div>
+                    <h2>{r.name}</h2>
+                    {r.reviews.map(y => <div>
+                        <h3>{y.rating}</h3>
+                        <p>{y.text}</p>
+                    </div>)}
+                    <p>{r.address}</p>
+                    </div>
+                    </Link>)}
+                </div>
+                <div id="myPlaces"> 
                     {this.state.places.map(p => 
                     <Link to = {{pathname: '/place', state:{place:p} }} id="myPlaces">
                     <div>
                     <h2>{p.name}</h2>
-                    <h3>{p.reviews.rating}</h3> 
-                    <p>{p.reviews.text}</p>
+                    {/* <h3>{p.reviews.rating}</h3> 
+                    <p>{p.reviews.text}</p> */}
                     <p>{p.address}</p>
                     </div>
                     </Link>)}
@@ -66,10 +102,10 @@ class Home extends React.Component {
         return(
             <div id="mainBody">
             <div id="header"><h1>Welcome to Nearby Places!</h1></div>
-                <div id="loginLink">
-                    {username.length > 0 ? username 
+            <div id="loginLink">
+                {username.length > 0 ? username 
                     : <Link to='/login' id='loginText'> Login </Link>}
-                </div>
+            </div>
             {this.body()}
             </div>
         );

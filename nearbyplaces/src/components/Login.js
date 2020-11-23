@@ -14,7 +14,7 @@ class Login extends React.Component {
     };
 
     onSubmit = (event) => {
-        //check if user has provided input for user
+        //check if user has provided input for username
         if(this.state.username.trim().length > 0) {
             this.setState({authenticated:true});
         };
@@ -52,6 +52,7 @@ class Login extends React.Component {
                     type="password"
                     name="password"
                     value={this.state.password}
+                    onChange={this.handleChange}
                     ></input>
                     <button type="submit"> Login </button>
                 </form>

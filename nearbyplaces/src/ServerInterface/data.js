@@ -6,9 +6,9 @@ const place1 = {
             {text:' Amazing burritos. ',
                 rating: '*****'},
             {text:' Tasty and affordable! ',
-                rating: '*****'},
+                rating: '****'},
             {text:' Good window and drive through service. ',
-            rating: '*****'}]
+            rating: '****'}]
 }
 const place2 = {
     name: 'Barrio Brewing',

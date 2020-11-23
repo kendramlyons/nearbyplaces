@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import Place from './components/Place';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
             </Route>
             <Route path = '/login'>
                 <Login />
+            </Route>
+            <Route path = '/place' render = {props => <Place {...props} />}>         
             </Route>
         </Switch>
     </BrowserRouter>
