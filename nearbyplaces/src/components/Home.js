@@ -42,6 +42,7 @@ class Home extends React.Component {
         this.setState({[name]: value});
     };
     body = (username) => {
+        console.log(username)
         return (
             <div> 
                 <div ><Link id="addNew" to = {{pathname: '/place', state:{username: username}}}>

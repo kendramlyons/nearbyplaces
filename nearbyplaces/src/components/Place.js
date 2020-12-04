@@ -22,7 +22,8 @@ class Place extends React.Component {
     onSubmit = (event) => {
         if (this.state.placeName.trim().length > 0 && this.state.address.trim().length > 0) {
             server.addPlace({ name: this.state.placeName, address: this.state.address, username: this.state.username });
-            this.setState({ place: { name: this.state.placeName, address: this.state.address } })
+            this.setState({ placeName: '', address: '' })
+            alert("The place was added successfully!")
         };
         event.preventDefault(); //tells the browser not to do default 
     };
@@ -41,15 +42,15 @@ class Place extends React.Component {
     };
     render() {
         console.log(this.state.username)
-        if (!this.state.place) {
-            if (this.state.username.length === 0) {
+        if (this.props.location.state) {
+            if (this.props.location.state.username.length === 0) {
                 return (<Redirect to="/login"></Redirect>)
             }
             return (
                 <div>
                 <div id="header">
-                    <Link to="/" id="hometext"><h2>Nearby Places</h2></Link>
-                    <h3>Login</h3></div>
+                    <Link to={{pathname:'/', state:{user:this.props.location.state.username}}} id="hometext"><h2>Nearby Places</h2></Link>
+                    </div>
                 <form onSubmit={this.onSubmit} id="newPlace">
                     <label>Name: </label>
                     <input 
