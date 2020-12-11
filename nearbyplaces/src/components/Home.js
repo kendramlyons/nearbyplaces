@@ -16,7 +16,7 @@ class Home extends React.Component {
         };
     };
     componentDidMount(){
-        server.fetchPlaces().then(x => this.setState({places: x})).catch(e => console.log(e))
+        server.fetchPlaces().then(x => {this.setState({places: x}); console.log(x);}).catch(e => console.log(e))
         window.addEventListener("keydown", this.handleKeyDown);
     };
     componentWillUnmount() {
@@ -85,7 +85,7 @@ class Home extends React.Component {
         };
         return(
             <div id="mainBody">
-            <div id="header"><h1>Welcome to Nearby Places!</h1></div>
+            <div id="header"><h1>Welcome to Your Nearby Places!</h1></div>
             <div id="loginLink">
                 {username.length > 0 ? username 
                     : <Link to='/login' id='loginText'> Login </Link>}
