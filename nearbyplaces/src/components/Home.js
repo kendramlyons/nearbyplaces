@@ -16,8 +16,7 @@ class Home extends React.Component {
         };
     };
     componentDidMount(){
-        let data = server.fetchPlaces();
-        this.setState({places: data});
+        server.fetchPlaces().then(x => this.setState({places: x})).catch(e => console.log(e))
         window.addEventListener("keydown", this.handleKeyDown);
     };
     componentWillUnmount() {
