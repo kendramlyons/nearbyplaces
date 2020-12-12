@@ -3,6 +3,8 @@ import './Place.css';
 import server from '../ServerInterface/server';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+// import Rating from '@material-ui/lab/Rating';
+// import { Rating } from '@material-ui/lab';
 
 class Place extends React.Component {
     constructor(props) {
@@ -11,7 +13,9 @@ class Place extends React.Component {
             placeName: '',
             address: '',
             place: undefined,
-            username: ''
+            username: '',
+            reviewText: '',
+            reviewRating: ''
         };
     };
     handleChange = (event) => {
@@ -48,26 +52,44 @@ class Place extends React.Component {
             }
             return (
                 <div>
-                <div id="header">
-                    <Link to={{pathname:'/', state:{user:this.props.location.state.username}}} id="hometext"><h2>Nearby Places</h2></Link>
+                    <div id="header">
+                        <Link to={{ pathname: '/', state: { user: this.props.location.state.username } }} id="hometext"><h2>Nearby Places</h2></Link>
                     </div>
-                <form onSubmit={this.onSubmit} id="newPlace">
-                    <label>Name: </label>
-                    <input 
-                    type="text" 
-                    name="placeName"
-                    value={this.state.placeName}
-                    onChange={this.handleChange}
-                    ></input>
-                    <label>  Address: </label>
-                    <input
-                    type="text"
-                    name="address"
-                    value={this.state.address}
-                    onChange={this.handleChange}
-                    ></input>
-                    <button type="submit"> Add Place </button>
-                </form></div>
+                    <form onSubmit={this.onSubmit} id="newPlace">
+                        <div id="addPlace">
+                        <label id="name">Name:</label>
+                        <input
+                            type="text"
+                            name="placeName"
+                            value={this.state.placeName}
+                            onChange={this.handleChange}
+                        ></input>
+                        <label id="address">Address:</label>
+                        <input
+                            type="text"
+                            name="address"
+                            value={this.state.address}
+                            onChange={this.handleChange}
+                        ></input>
+                        <button type="submit" id="button"> Add Place </button></div>
+                        <br></br>
+                        <div id="addReview">
+                        <label id="aReview">Review:</label>
+                        <input
+                            type="text"
+                            name="reviewText"
+                            value={this.state.reviewText}
+                            onChange={this.handleChange}
+                        ></input>
+                        <label id="aRating">Rating:</label>
+                        <input
+                            type="text"
+                            name="reviewRating"
+                            value={this.state.reviewRating}
+                            onChange={this.handleChange}
+                        ></input>
+                        <button type="submit" id="button"> Add Review </button></div>
+                    </form></div>
             );
         } else {
             return (

@@ -16,7 +16,7 @@ class Home extends React.Component {
         };
     };
     componentDidMount(){
-        server.fetchPlaces().then(x => {this.setState({places: x}); console.log(x);}).catch(e => console.log(e))
+        server.fetchPlaces().then(x => {this.setState({places: x}); console.log(x);}).catch(e => console.log(e));
         window.addEventListener("keydown", this.handleKeyDown);
     };
     componentWillUnmount() {
@@ -44,9 +44,8 @@ class Home extends React.Component {
         console.log(username)
         return (
             <div> 
-                <div ><Link id="addNew" to = {{pathname: '/place', state:{username: username}}}>
-                    Add New Place</Link></div>
-                <form id="searchPlaces" onSubmit={this.search}>
+                <div id="searchPlaces">
+                <form onSubmit={this.search}>
                     <label> Find Nearby Places: </label>
                     <input type="text" value={this.state.searchTerm} 
                         onChange={this.handleChange} name="searchTerm"></input>
@@ -54,13 +53,15 @@ class Home extends React.Component {
                 </form>
                 <div id = "searchResults">
                     {this.state.result.map(r => 
-                    <Link to = {{pathname: '/place', state:{place:r} }} id="searchResults">
+                    <Link to = {{pathname: '/place', state:{place:r} }} id="aPlace">
                     <h1>{r.name}</h1>
                     <h3>{r.address}</h3>
-                    {r.reviews.map(y => <div>
-                        <h2>{y.rating}</h2>
-                        <p>{y.text}</p></div>)}</Link>)}
-                </div>
+                    {r.reviews.map(y => <div id="aRating">
+                        <h2 id="stars">{y.rating}</h2>
+                        <p id="review">{y.text}</p></div>)}</Link>)}
+                </div></div>
+                <div id="new"><Link id="addNew" to = {{pathname: '/place', state:{username: username}}}>
+                    Add New Place</Link></div>
                 <div id="myPlaces"> 
                     {this.state.places.map(p => 
                     <Link to = {{pathname: '/place', state:{place:p} }} id="myPlaces">
@@ -85,7 +86,7 @@ class Home extends React.Component {
         };
         return(
             <div id="mainBody">
-            <div id="header"><h1>Welcome to Your Nearby Places!</h1></div>
+            <div id="header"><h1>Welcome to Nearby Places!</h1></div>
             <div id="loginLink">
                 {username.length > 0 ? username 
                     : <Link to='/login' id='loginText'> Login </Link>}

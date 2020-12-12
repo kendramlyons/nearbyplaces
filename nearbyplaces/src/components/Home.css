@@ -6,7 +6,7 @@
     font-style: italic;
     border-style: dotted;
     color: mediumpurple;
-    padding: 5px;
+    padding: 10px;
     margin-right: auto;
     margin-left: auto;
 
@@ -34,11 +34,11 @@
     display: inline-block;
 }
 #searchPlaces {
-    float: center;
+    display: flexbox;
     width: fit-content;
     border: coral;
     border-style: dotted;
-    padding: 5px;
+    padding: 15px;
     margin-top: 10px;
     margin-right: auto;
     margin-left: auto;
@@ -55,18 +55,48 @@
     margin: 10px;
 }
 #addNew {
-    float: center;
-    margin-left: 10px;
+    float:center;
+    text-align: center;
     width: fit-content;
     font-family: Arial, Helvetica, sans-serif;
     border-style: dotted;
     color: mediumpurple;
-    padding: 5px;
+    padding: 10px;
     text-decoration: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+#new {
+    float:center;
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:5px;
 }
 #addNew:hover {
     color:coral;
 }
 #searchResults {
+    display: inline;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+
+}
+#aPlace {
+    display: flexbox;
+    text-decoration: none;
+    color: black;
+}
+#aRating {
     display: flex;
+}
+#review {
+    margin-left:10px;
+}
+
+label {
+    margin-left:10px;
 }
