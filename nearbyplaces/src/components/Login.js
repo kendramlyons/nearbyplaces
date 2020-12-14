@@ -15,7 +15,7 @@ class Login extends React.Component {
     onSubmit = (event) => {
         //check if user has provided input for username
         if(this.state.username.trim().length > 0) {
-            this.setState({authenticated:true});
+            this.setState({authenticated: true});
         };
         event.preventDefault(); //tells the browser not to do default 
     };

@@ -15,21 +15,13 @@ class Home extends React.Component {
             result: []
         };
     };
-    componentDidMount(){
-        server.fetchPlaces().then(x => {this.setState({places: x}); console.log(x);}).catch(e => console.log(e));
+    componentDidMount() {
+        server.fetchPlaces().then(x => {this.setState({places: x}); console.log(x)}).catch(e => console.log(e));
         window.addEventListener("keydown", this.handleKeyDown);
     };
     componentWillUnmount() {
         window.removeEventListener("keydown", this.handleKeyDown);
     };
-    // handleKeyDown = (e) => {
-    //     const {cursor, entries} = this.state;
-    //     if(e.keyCode === 39 && (cursor < entries.length - 1)) { //right arrow key
-    //         this.setState({cursor: cursor + 1});
-    //     } else if (e.keyCode === 37 && (cursor > 0)) {  //left arrow key
-    //         this.setState({cursor: cursor - 1});
-    //     };
-    // }
     search = (event) => {
         let result = server.search(this.state.searchTerm);
         this.setState({result: result})
@@ -53,12 +45,13 @@ class Home extends React.Component {
                 </form>
                 <div id = "searchResults">
                     {this.state.result.map(r => 
-                    <Link to = {{pathname: '/place', state:{place:r} }} id="aPlace">
+                    <div><img src={require('../images/'+r.image)} alt={r.name} id="image"></img><Link to = {{pathname: '/place', state:{place:r} }} id="aPlace">
                     <h1>{r.name}</h1>
                     <h3>{r.address}</h3>
+                    
                     {r.reviews.map(y => <div id="aRating">
                         <h2 id="stars">{y.rating}</h2>
-                        <p id="review">{y.text}</p></div>)}</Link>)}
+                        <p id="review">{y.text}</p></div>)}</Link></div>)}
                 </div></div>
                 <div id="new"><Link id="addNew" to = {{pathname: '/place', state:{username: username}}}>
                     Add New Place</Link></div>
@@ -92,7 +85,6 @@ class Home extends React.Component {
                     : <Link to='/login' id='loginText'> Login </Link>}
             </div>
             {this.body(username)}
-            <br></br>
             </div>
         );
     };

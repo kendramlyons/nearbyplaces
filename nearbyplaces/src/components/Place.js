@@ -15,7 +15,7 @@ class Place extends React.Component {
             place: undefined,
             username: '',
             reviewText: '',
-            reviewRating: ''
+            reviewRating: '*****'
         };
     };
     handleChange = (event) => {
