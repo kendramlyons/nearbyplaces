@@ -1,22 +1,26 @@
 {
   "files": {
     "main.css": "/nearbyplaces/static/css/main.7d74b9f4.chunk.css",
-    "main.js": "/nearbyplaces/static/js/main.3584638b.chunk.js",
-    "main.js.map": "/nearbyplaces/static/js/main.3584638b.chunk.js.map",
-    "runtime-main.js": "/nearbyplaces/static/js/runtime-main.b5ce4802.js",
-    "runtime-main.js.map": "/nearbyplaces/static/js/runtime-main.b5ce4802.js.map",
-    "static/js/2.42f39702.chunk.js": "/nearbyplaces/static/js/2.42f39702.chunk.js",
-    "static/js/2.42f39702.chunk.js.map": "/nearbyplaces/static/js/2.42f39702.chunk.js.map",
-    "static/js/3.295a391e.chunk.js": "/nearbyplaces/static/js/3.295a391e.chunk.js",
-    "static/js/3.295a391e.chunk.js.map": "/nearbyplaces/static/js/3.295a391e.chunk.js.map",
+    "main.js": "/nearbyplaces/static/js/main.f21ecc78.chunk.js",
+    "main.js.map": "/nearbyplaces/static/js/main.f21ecc78.chunk.js.map",
+    "runtime-main.js": "/nearbyplaces/static/js/runtime-main.7c211803.js",
+    "runtime-main.js.map": "/nearbyplaces/static/js/runtime-main.7c211803.js.map",
+    "static/js/2.b0f9cc25.chunk.js": "/nearbyplaces/static/js/2.b0f9cc25.chunk.js",
+    "static/js/2.b0f9cc25.chunk.js.map": "/nearbyplaces/static/js/2.b0f9cc25.chunk.js.map",
+    "static/js/3.5d789132.chunk.js": "/nearbyplaces/static/js/3.5d789132.chunk.js",
+    "static/js/3.5d789132.chunk.js.map": "/nearbyplaces/static/js/3.5d789132.chunk.js.map",
     "index.html": "/nearbyplaces/index.html",
     "static/css/main.7d74b9f4.chunk.css.map": "/nearbyplaces/static/css/main.7d74b9f4.chunk.css.map",
-    "static/js/2.42f39702.chunk.js.LICENSE.txt": "/nearbyplaces/static/js/2.42f39702.chunk.js.LICENSE.txt"
+    "static/js/2.b0f9cc25.chunk.js.LICENSE.txt": "/nearbyplaces/static/js/2.b0f9cc25.chunk.js.LICENSE.txt",
+    "static/media/barrio.jpg": "/nearbyplaces/static/media/barrio.8e30dd56.jpg",
+    "static/media/laco.jpg": "/nearbyplaces/static/media/laco.40346b24.jpg",
+    "static/media/tacoshop.jpg": "/nearbyplaces/static/media/tacoshop.078ab90f.jpg",
+    "static/media/tumerico.jpg": "/nearbyplaces/static/media/tumerico.70448188.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5ce4802.js",
-    "static/js/2.42f39702.chunk.js",
+    "static/js/runtime-main.7c211803.js",
+    "static/js/2.b0f9cc25.chunk.js",
     "static/css/main.7d74b9f4.chunk.css",
-    "static/js/main.3584638b.chunk.js"
+    "static/js/main.f21ecc78.chunk.js"
   ]
 }
