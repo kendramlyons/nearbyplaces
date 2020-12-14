@@ -100,3 +100,9 @@
 label {
     margin-left:10px;
 }
+
+button {
+    margin: 10px;
+
+    font-size: medium;
+}

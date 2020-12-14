@@ -45,7 +45,6 @@ class Place extends React.Component {
         }
     };
     render() {
-        console.log(this.state.username)
         if (this.props.location.state) {
             if (this.props.location.state.username.length === 0) {
                 return (<Redirect to="/login"></Redirect>)

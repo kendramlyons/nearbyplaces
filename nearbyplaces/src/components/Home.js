@@ -45,14 +45,33 @@ class Home extends React.Component {
                 </form>
                 <div id = "searchResults">
                     {this.state.result.map(r => 
-                    <div><img src={require('../images/'+r.image)} alt={r.name} id="image"></img><Link to = {{pathname: '/place', state:{place:r} }} id="aPlace">
+                    <div><img src={require('../images/'+r.image)} alt={r.name} id="image"></img>
+                    <Link to = {{pathname: '/place', state:{place:r} }} id="aPlace">
                     <h1>{r.name}</h1>
-                    <h3>{r.address}</h3>
-                    
+                    <h3>{r.address}</h3></Link>
                     {r.reviews.map(y => <div id="aRating">
                         <h2 id="stars">{y.rating}</h2>
-                        <p id="review">{y.text}</p></div>)}</Link></div>)}
-                </div></div>
+                        <p id="review">{y.text}</p></div>)}</div>)}
+
+                    <div id="addReview">
+                        <label id="aReview">Review:</label>
+                        <input
+                            type="text"
+                            name="reviewText"
+                            value={this.state.reviewText}
+                            onChange={this.handleChange}
+                        ></input>
+
+                        <label id="aRating">Rating:</label>
+                        <input
+                            type="text"
+                            name="reviewRating"
+                            value={this.state.reviewRating}
+                            onChange={this.handleChange}
+                        ></input>
+                        <br></br>
+                        <button type="submit" id="button"> Add Review </button>
+                    </div></div>                    </div>
                 <div id="new"><Link id="addNew" to = {{pathname: '/place', state:{username: username}}}>
                     Add New Place</Link></div>
                 <div id="myPlaces"> 

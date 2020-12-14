@@ -10,10 +10,12 @@
     }
 
 #loginForm {
-    display:block;
+    float:center;
+    margin-left:auto;
+    margin-right:auto;
     border: dotted;
-    padding: 10px;
-    width: 90%;
+    padding: 15px;
+    width: fit-content;
     text-align: center;
 }
 #home {
