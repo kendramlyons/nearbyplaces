@@ -34,8 +34,8 @@ class Login extends React.Component {
         return(
             <div id="mainBody">
                 <div id="header">
-                    <Link to="/" id="hometext"><h2>Nearby Places</h2></Link>
-                    <h3>Login</h3></div>
+                    <Link to="/" id="hometext"><h1>Nearby Places</h1></Link>
+                    <h2 id="subheading">Login</h2></div>
                 <form onSubmit={this.onSubmit} id="loginForm">
                     <label>Username: </label>
                     <input 

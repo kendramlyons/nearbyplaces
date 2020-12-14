@@ -52,26 +52,24 @@ class Home extends React.Component {
                     {r.reviews.map(y => <div id="aRating">
                         <h2 id="stars">{y.rating}</h2>
                         <p id="review">{y.text}</p></div>)}</div>)}
-
-                    <div id="addReview">
-                        <label id="aReview">Review:</label>
+                    {this.state.result.length > 0 ? <div id="addInfo">
+                        <label id="input">Review:</label>
                         <input
                             type="text"
                             name="reviewText"
                             value={this.state.reviewText}
                             onChange={this.handleChange}
                         ></input>
-
-                        <label id="aRating">Rating:</label>
+                        <label id="input">Rating:</label>
                         <input
                             type="text"
                             name="reviewRating"
                             value={this.state.reviewRating}
                             onChange={this.handleChange}
                         ></input>
-                        <br></br>
                         <button type="submit" id="button"> Add Review </button>
-                    </div></div>                    </div>
+                    </div> : ''}
+                </div></div>
                 <div id="new"><Link id="addNew" to = {{pathname: '/place', state:{username: username}}}>
                     Add New Place</Link></div>
                 <div id="myPlaces"> 
