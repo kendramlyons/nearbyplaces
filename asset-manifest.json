@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/nearbyplaces/static/css/main.68d4fbe4.chunk.css",
-    "main.js": "/nearbyplaces/static/js/main.27fe2985.chunk.js",
-    "main.js.map": "/nearbyplaces/static/js/main.27fe2985.chunk.js.map",
+    "main.css": "/nearbyplaces/static/css/main.553e56ae.chunk.css",
+    "main.js": "/nearbyplaces/static/js/main.537965a7.chunk.js",
+    "main.js.map": "/nearbyplaces/static/js/main.537965a7.chunk.js.map",
     "runtime-main.js": "/nearbyplaces/static/js/runtime-main.7c211803.js",
     "runtime-main.js.map": "/nearbyplaces/static/js/runtime-main.7c211803.js.map",
     "static/js/2.b0f9cc25.chunk.js": "/nearbyplaces/static/js/2.b0f9cc25.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.5d789132.chunk.js": "/nearbyplaces/static/js/3.5d789132.chunk.js",
     "static/js/3.5d789132.chunk.js.map": "/nearbyplaces/static/js/3.5d789132.chunk.js.map",
     "index.html": "/nearbyplaces/index.html",
-    "static/css/main.68d4fbe4.chunk.css.map": "/nearbyplaces/static/css/main.68d4fbe4.chunk.css.map",
+    "static/css/main.553e56ae.chunk.css.map": "/nearbyplaces/static/css/main.553e56ae.chunk.css.map",
     "static/js/2.b0f9cc25.chunk.js.LICENSE.txt": "/nearbyplaces/static/js/2.b0f9cc25.chunk.js.LICENSE.txt",
     "static/media/barrio.jpg": "/nearbyplaces/static/media/barrio.8e30dd56.jpg",
     "static/media/laco.jpg": "/nearbyplaces/static/media/laco.40346b24.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.7c211803.js",
     "static/js/2.b0f9cc25.chunk.js",
-    "static/css/main.68d4fbe4.chunk.css",
-    "static/js/main.27fe2985.chunk.js"
+    "static/css/main.553e56ae.chunk.css",
+    "static/js/main.537965a7.chunk.js"
   ]
 }
